@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title><?php echo $this->baslik ?></title>
+        <link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../../../css/bootstrap.css"><!-- bootstrapin kaynak stil dosyalarının yolunu belirt -->
+        <link rel="stylesheet" href="../../../css/bootstrap-theme.min.css"><!-- bootstrap opsiyonel temaların yolunu belirt -->
+        <script src=" http://code.jquery.com/jquery-2.1.1.min.js"></script><!--jquery dosyasının indirileceği yolu belirt-->
+                <script src="../../../js/bootstrap.min.js"></script><!-- bootstrap in script dosyalarının indirileceği yolu belirt-->
+    
+    <script language="Javascript">
+    $(function(){
+        window.setTimeout(mesajlariTemizle,3000);
+    });
+    
+    function mesajlariTemizle(){
+        $("#hataMesaji").hide("slow");
+        $("#bilgiMesaji").hide("slow");
+    }
+
+
+    </script>
+
+    </head>
+    <body>
+        <div class="bs-example">
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
+                            <span class="sr-only"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/">Eğitim Projesi</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+                        <ul class="nav navbar-nav">
+                            <li><a href="/">Anasayfa</a></li>
+                            <li><a href="/haber">Ders Duyuruları</a></li>
+                            <li><a href="/ders">Dersler</a></li>
+                            <li><a href="/odev">Ödevler</a></li>
+                             <li><a href="/sinav">Sınavlar</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </div>
+
+        <div class="container">
+
+            <div style="clear:both" ></div> 
+            <div style="float:left">
+                <?php echo $this->layout()->content ?>
+            </div>
+            
+            
+            <p class="bg-success" id="bilgiMesaji"><?php echo $this->bilgiMesaji ?></p>
+            <p class="bg-danger" id="hataMesaji"><?php echo $this->hataMesaji ?></p>
+
+            <div style="float:right">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Hızlı Erişim</div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <?php foreach ($this->yanMenu as $menu): ?>
+                                <li class="list-group-item list-group-item-info"><a href="<?php echo $menu['link'] ?>"><?php echo $menu['menu_adi'] ?></a> 
+                                <?php endforeach; ?>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div style="clear:both"></div>
+            <center>
+                <div class="alert alert-danger">Bu bir Ubit Zend Projesi olup tüm hakları saklıdır...</div>
+            </center>
+        </div>
+    </body>
+</html>
