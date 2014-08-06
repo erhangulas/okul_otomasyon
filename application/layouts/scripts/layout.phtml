@@ -62,18 +62,7 @@
             <p class="bg-success" id="bilgiMesaji"><?php echo $this->bilgiMesaji ?></p>
             <p class="bg-danger" id="hataMesaji"><?php echo $this->hataMesaji ?></p>
 
-            <div style="float:right">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">Hızlı Erişim</div>
-                    <div class="panel-body">
-                        <ul class="list-group">
-                            <?php foreach ($this->yanMenu as $menu): ?>
-                                <li class="list-group-item list-group-item-info"><a href="<?php echo $menu['link'] ?>"><?php echo $menu['menu_adi'] ?></a> 
-                                <?php endforeach; ?>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            
             <div style="clear:both"></div>
             <center>
                 <div class="alert alert-danger">Bu bir Ubit Zend Projesi olup tüm hakları saklıdır...</div>

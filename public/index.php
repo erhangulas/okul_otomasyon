@@ -11,7 +11,7 @@ define("ROOT_PUBLIC",ROOT_DIR."/public/");
 define('APPLICATION_PATH', BASE_PATH . '/application');
 
 //error_reporting(E_ALL  || ~E_NOTICE);
-
+//error_reporting(1);
 mb_internal_encoding("UTF-8");
 ini_set('default_charset','UTF-8');
 
@@ -29,6 +29,7 @@ set_include_path('.'
                   . PATH_SEPARATOR . get_include_path());
 
 // Define application environment
+
 defined('APPLICATION_ENV')
     || define('APPLICATION_ENV',
               (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV')
@@ -62,4 +63,5 @@ foreach ($modules as $modul) {
 
 
 $application->bootstrap();
+
 $application->run();
