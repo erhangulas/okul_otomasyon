@@ -24,12 +24,13 @@ class GirisController extends Zend_Controller_Action{
 				$this->_redirect("giris/index");
 			}
 			else{
+                $ses= new Zend_Session_Namespace('userSession');
                 $tblgrup= new tblKullanici();
                 $kullanici_adi=$this->getRequest()->getParam("kullanici_adi");
                 $select=$tblgrup->select()->where("kullanici_adi=?",$kullanici_adi);
                 $data=$tblgrup->fetchAll($select)->toArray();
                 $kullanici=$data[0];
-                $ses= new Zend_Session_Namespace('userSession');
+                $ses->$kullanici;
                 $grup_kodu= $kullanici['grup_kodu'] ? $kullanici['grup_kodu'] : 4;
                 $acl= new Zend_Acl();
                 $role= new Zend_Acl_Role($grup_kodu);
@@ -50,7 +51,18 @@ class GirisController extends Zend_Controller_Action{
                 }
                 $ses->acl = $acl;
                 $ses->grup_kodu =$grup_kodu;
-
+                switch($grup_kodu){
+                    case 1:
+                        $this->_redirect("admin/index");
+                        break;
+                    case 2:
+                        $this->_redirect("ogretmen/index");
+                        break;
+                    case 3:
+                        $this->_redirect("ogrenci/index");
+                        break;
+                    case 4:
+                }
 			}
 		}
 		catch(Zend_Exception $e){

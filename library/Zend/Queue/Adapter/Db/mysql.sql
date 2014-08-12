@@ -15,7 +15,7 @@ Sample grant for MySQL
 GRANT DELETE, INSERT, SELECT, UPDATE ON queue.* TO 'queue'@'127.0.0.1' IDENTIFIED BY '[CHANGE ME]';
 mysql -u queue -h 127.0.0.1 -p queue
 
-mysqlaccess queue queue --superuser=root -H 127.0.0.1
+mysqlaccess queue queue --admin=root -H 127.0.0.1
 
 
 */
