@@ -1,5 +1,6 @@
 <?php
 class GirisController extends Zend_Controller_Action{
+
 	public function indexAction(){
 			
 	}
@@ -30,14 +31,14 @@ class GirisController extends Zend_Controller_Action{
                 $select=$tblgrup->select()->where("kullanici_adi=?",$kullanici_adi);
                 $data=$tblgrup->fetchAll($select)->toArray();
                 $kullanici=$data[0];
-                $ses->$kullanici;
+                $ses->kullanici=$kullanici;
                 $grup_kodu= $kullanici['grup_kodu'] ? $kullanici['grup_kodu'] : 4;
                 $acl= new Zend_Acl();
                 $role= new Zend_Acl_Role($grup_kodu);
 
                 $acl->addRole($role);
-                $acl->add(new Zend_Acl_Resource('giris'));
-                $acl->allow($grup_kodu,'giris','index');
+                $acl->add(new Zend_Acl_Resource('admin'));
+                $acl->allow($grup_kodu,'admin','index');
 
                 $tblacl= new TblYetki();
                 $select= $tblacl->select()->where("grup_kodu=?",$grup_kodu);
@@ -51,6 +52,10 @@ class GirisController extends Zend_Controller_Action{
                 }
                 $ses->acl = $acl;
                 $ses->grup_kodu =$grup_kodu;
+
+                $this->_redirect("admin/index");
+/*
+
                 switch($grup_kodu){
                     case 1:
                         $this->_redirect("admin/index");
@@ -62,7 +67,9 @@ class GirisController extends Zend_Controller_Action{
                         $this->_redirect("ogrenci/index");
                         break;
                     case 4:
-                }
+                        $this->_redirect("giris/index");
+                        break;
+                }*/
 			}
 		}
 		catch(Zend_Exception $e){

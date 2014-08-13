@@ -1,16 +1,16 @@
-<h3><?php echo $this->baslik1 ?></h3>
+
 <div align="right"><a href="/giris/logout" class="btn btn-info btn-sm">ÇIKIŞ YAP</a></div>
 
 <table class="table table-bordered table-stripped" >
     <tbody>
         <tr>
-            <td><img src="/foto/<?php echo $data['fotograf']?>" height="50" width="50" /></td>
-            <td><?php echo $data['veli_telefon']?></td>
-            <td><?php echo $data['adi']?></a></td>
-            <td><?php echo $data['soyadi']?></td>
-            <td><?php echo $data['dogum_yili']?></td>
-            <td><?php echo $data['velisi']?></td>
-            <td><?php echo $data['veli_telefon']?></td>
+            <td><img src="/foto/<?php echo $this->data['fotograf']?>" height="50" width="50" /></td>
+            <td><?php echo $this->data['veli_telefon']?></td>
+            <td><?php echo $this->data['adi']?></a></td>
+            <td><?php echo $this->data['soyadi']?></td>
+            <td><?php echo $this->data['dogum_yili']?></td>
+            <td><?php echo $this->data['velisi']?></td>
+            <td><?php echo $this->data['veli_telefon']?></td>
         </tr>
     </tbody>
 </table>

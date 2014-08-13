@@ -8,6 +8,7 @@ class Site_Controller_Action extends Zend_Controller_Action{
         $this->view->hataMesaji=$this->userSession->hataMesaji;
     }
     public function preDispatch(){
+        $this->userSession = new Zend_Session_Namespace('userSession');
 
         if($this->userSession->grup_kodu!=1){
             $acl = $this->userSession->acl;
@@ -23,7 +24,7 @@ class Site_Controller_Action extends Zend_Controller_Action{
                 }
             }
             else{
-                $this->userSession->hataMesaji="Yetkiniz yok!";
+                $this->userSession->hataMesaji="Yetkiniz yok?!";
                 $this->_redirect('/giris/index');
             }
         }

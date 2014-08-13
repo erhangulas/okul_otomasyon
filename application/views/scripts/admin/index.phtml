@@ -9,5 +9,11 @@
         <td>
             <a href="/admin/ogrencibilgi" class="btn btn-info btn-sm">ÖĞRENCİ BİLGİLERİ</a>
         </td>
+
     </table>
 
+<ul>
+<?php foreach($this->menu as $menu): ?>
+    <li><a href="/<?php echo $menu['controller'] ?>/<?php echo $menu['action'] ?>/" ><?php echo $menu['menu_adi'] ?></a></li>
+<?php endforeach ?>
+</ul>
