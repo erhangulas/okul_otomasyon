@@ -6,13 +6,7 @@
  * Time: 13:58
  */
 class ogrenciController extends Site_Controller_Action{
-    function init(){
-        $auth=Zend_Auth::getInstance();
-        if(!$auth->hasIdentity()){
-            $this->userSession->hataMesaji="Giriş Yetkiniz Bulunmamaktadır!";
-            $this->_redirect("/giris/index");
-        }
-    }
+
     public function indexAction(){
         $ses= new Zend_Session_Namespace('userSession');
         $kullanici=$ses->kullanici;
@@ -26,6 +20,18 @@ class ogrenciController extends Site_Controller_Action{
 
         $this->view->data=$data[0];
 
+
+    }
+    public function ekleAction(){
+
+    }
+    public function silAction(){
+
+    }
+    public function duzenleAction(){
+
+    }
+    public function dersekleAction(){
 
     }
 }

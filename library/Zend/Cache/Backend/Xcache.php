@@ -51,10 +51,10 @@ class Zend_Cache_Backend_Xcache extends Zend_Cache_Backend implements Zend_Cache
      * Available options
      *
      * =====> (string) user :
-     * xcache.admin.user (necessary for the clean() method)
+     * xcache.index.user (necessary for the clean() method)
      *
      * =====> (string) password :
-     * xcache.admin.pass (clear, not MD5) (necessary for the clean() method)
+     * xcache.index.pass (clear, not MD5) (necessary for the clean() method)
      *
      * @var array available options
      */

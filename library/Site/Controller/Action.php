@@ -3,6 +3,11 @@ class Site_Controller_Action extends Zend_Controller_Action{
     protected $userSession;
     public function init()
     {
+        $auth=Zend_Auth::getInstance();
+        if(!$auth->hasIdentity()){
+            $this->userSession->hataMesaji="Giriş Yetkiniz Bulunmamaktadır!";
+            $this->_redirect("/giris/index");
+        }
         $this->userSession = new Zend_Session_Namespace('userSession');
         $this->view->bilgiMesaji=$this->userSession->bilgiMesaji;
         $this->view->hataMesaji=$this->userSession->hataMesaji;

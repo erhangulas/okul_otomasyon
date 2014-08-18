@@ -525,12 +525,12 @@ class Zend_Controller_Front
      *
      * Use to set the base URL segment of the REQUEST_URI to use when
      * determining PATH_INFO, etc. Examples:
-     * - /admin
+     * - /index
      * - /myapp
      * - /subdir/index.php
      *
      * Note that the URL should not include the full URI. Do not use:
-     * - http://example.com/admin
+     * - http://example.com/index
      * - http://example.com/myapp
      * - http://example.com/subdir/index.php
      *

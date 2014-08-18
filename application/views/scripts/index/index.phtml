@@ -1,0 +1,18 @@
+<?php if(sizeof($this->yeni)): ?>
+<?php foreach($this->yeni as $anamenu=>$menu):?>
+    <div class="dropdown pull-left">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+            <?php echo $anamenu ; ?>
+            <span class="caret"></span>
+        </button>
+
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <?php foreach($menu as $j => $menuItem): ?>
+                <li role="presentation"><a role="menuitem" tabindex="<?php echo $j ?>" href="/<?php echo $menuItem['controller'].'/'.$menuItem['action'] ?>"><?php echo $menuItem['menu_adi'] ?></a></li>
+            <?php endforeach ?>
+        </ul>
+
+    </div>
+<?php endforeach;?>
+<?php endif; ?>
+

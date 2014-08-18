@@ -65,7 +65,7 @@ class Zend_Amf_Adobe_Auth extends Zend_Amf_Auth_Abstract
 /*
 Roles file format:
  <roles>
-   <role id=”admin”>
+   <role id=”index”>
         <user name=”user1” password=”pwd”/>
     </role>
    <role id=”hr”>

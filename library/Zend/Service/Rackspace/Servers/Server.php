@@ -186,7 +186,7 @@ class Zend_Service_Rackspace_Servers_Server
         return $this->hostId;
     }
     /**
-     * Ge the server's admin password
+     * Ge the server's index password
      * 
      * @return string 
      */
@@ -279,7 +279,7 @@ class Zend_Service_Rackspace_Servers_Server
         return false;
     }
     /**
-     * Change the admin password of the server
+     * Change the index password of the server
      * 
      * @param string $password
      * @return boolean 

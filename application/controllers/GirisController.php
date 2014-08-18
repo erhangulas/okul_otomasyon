@@ -37,8 +37,8 @@ class GirisController extends Zend_Controller_Action{
                 $role= new Zend_Acl_Role($grup_kodu);
 
                 $acl->addRole($role);
-                $acl->add(new Zend_Acl_Resource('admin'));
-                $acl->allow($grup_kodu,'admin','index');
+                $acl->add(new Zend_Acl_Resource('index'));
+                $acl->allow($grup_kodu,'index','index');
 
                 $tblacl= new TblYetki();
                 $select= $tblacl->select()->where("grup_kodu=?",$grup_kodu);
@@ -53,12 +53,12 @@ class GirisController extends Zend_Controller_Action{
                 $ses->acl = $acl;
                 $ses->grup_kodu =$grup_kodu;
 
-                $this->_redirect("admin/index");
+                $this->_redirect("index/index");
 /*
 
                 switch($grup_kodu){
                     case 1:
-                        $this->_redirect("admin/index");
+                        $this->_redirect("index/index");
                         break;
                     case 2:
                         $this->_redirect("ogretmen/index");

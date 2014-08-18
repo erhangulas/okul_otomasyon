@@ -52,7 +52,7 @@ $application = new Zend_Application(
 
 
 /*
-$modules = array('yonetim',"admin");
+$modules = array('yonetim',"index");
 foreach ($modules as $modul) {
     set_include_path(get_include_path() . PATH_SEPARATOR . ROOT_DIR . '/application/modules/'. $modul .'/models');
     set_include_path(get_include_path() . PATH_SEPARATOR . ROOT_DIR . '/application/modules/'. $modul .'/forms');

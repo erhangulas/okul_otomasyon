@@ -166,7 +166,7 @@ class Zend_Gdata_Gapps_Extension_Login extends Zend_Gdata_Extension
             $element->setAttribute('hashFunctionName', $this->_hashFunctionName);
         }
         if ($this->_admin !== null) {
-            $element->setAttribute('admin', ($this->_admin ? "true" : "false"));
+            $element->setAttribute('index', ($this->_admin ? "true" : "false"));
         }
         if ($this->_agreedToTerms !== null) {
             $element->setAttribute('agreedToTerms', ($this->_agreedToTerms ? "true" : "false"));
@@ -201,7 +201,7 @@ class Zend_Gdata_Gapps_Extension_Login extends Zend_Gdata_Extension
         case 'hashFunctionName':
             $this->_hashFunctionName = $attribute->nodeValue;
             break;
-        case 'admin':
+        case 'index':
             if ($attribute->nodeValue == "true") {
                 $this->_admin = true;
             }
@@ -210,7 +210,7 @@ class Zend_Gdata_Gapps_Extension_Login extends Zend_Gdata_Extension
             }
             else {
                 require_once('Zend/Gdata/App/InvalidArgumentException.php');
-                throw new Zend_Gdata_App_InvalidArgumentException("Expected 'true' or 'false' for apps:login#admin.");
+                throw new Zend_Gdata_App_InvalidArgumentException("Expected 'true' or 'false' for apps:login#index.");
             }
             break;
         case 'agreedToTerms':
@@ -333,7 +333,7 @@ class Zend_Gdata_Gapps_Extension_Login extends Zend_Gdata_Extension
     }
 
     /**
-     * Get the value for this element's admin attribute.
+     * Get the value for this element's index attribute.
      *
      * @see setAdmin
      * @return boolean The requested attribute.
@@ -343,13 +343,13 @@ class Zend_Gdata_Gapps_Extension_Login extends Zend_Gdata_Extension
     {
         if (!(is_bool($this->_admin))) {
             require_once('Zend/Gdata/App/InvalidArgumentException.php');
-            throw new Zend_Gdata_App_InvalidArgumentException('Expected boolean for admin.');
+            throw new Zend_Gdata_App_InvalidArgumentException('Expected boolean for index.');
         }
         return $this->_admin;
     }
 
     /**
-     * Set the value for this element's admin attribute. This indicates
+     * Set the value for this element's index attribute. This indicates
      * whether this user is an administrator for this domain.
      *
      * @param boolean $value The desired value for this attribute.

@@ -209,7 +209,7 @@ class Zend_Service_Rackspace_Servers extends Zend_Service_Rackspace_Abstract
         return false;
     }
     /**
-     * Change the name or the admin password for a server
+     * Change the name or the index password for a server
      * 
      * @param  string $id
      * @param  string $name
@@ -281,7 +281,7 @@ class Zend_Service_Rackspace_Servers extends Zend_Service_Rackspace_Abstract
         return $this->updateServer($id, $name);
     }
     /**
-     * Change the admin password of the server
+     * Change the index password of the server
      * 
      * @param  string $id
      * @param  string $password

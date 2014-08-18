@@ -75,7 +75,7 @@ class Zend_Service_DeveloperGarden_BaseUserService extends Zend_Service_Develope
      *
      * @var string
      */
-    protected $_wsdlFile = 'https://gateway.developer.telekom.com/p3gw-mod-odg-admin/services/ODGBaseUserService?wsdl';
+    protected $_wsdlFile = 'https://gateway.developer.telekom.com/p3gw-mod-odg-index/services/ODGBaseUserService?wsdl';
 
     /**
      * wsdl file local
