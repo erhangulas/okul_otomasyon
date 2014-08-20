@@ -1,55 +1,18 @@
-<font color="green"><strong><h3><?php echo $this->baslik?></h3></strong></font>
-<a href="/ogrenci/duzenle"><span class="glyphicon glyphicon-user"></span>Yeni Kayıt</a>
-<table class="table table-bordered table-stripped">
-    <thead>
-    <tr class="alert-info" >
-        <th>#</th>
-        <th>Kullanıcı ID</th>
-        <th>Öğrenci No</th>
-        <th>Adı</th>
-        <th>Soyadı</th>
-        <th>Fotoğraf</th>
-        <th>Doğum Yılı</th>
-        <th>Velisi</th>
-        <th>Veli Telefon</th>
-        <th></th>
-        <th></th>
-    </tr>
-    </thead>
+
+<div align="right"><a href="/giris/logout" class="btn btn-info btn-sm">ÇIKIŞ YAP</a></div>
+
+<table class="table table-bordered table-stripped" >
     <tbody>
-    <?php foreach($this->data as $i=> $satir):?>
-        <tr class="warning">
-            <td class="alert-info"><?php echo $i+1?></td>
-            <td><?php echo $satir['kullanici_id']?></td>
-            <td><?php echo $satir['ogrenci_no']?></td>
-            <td><?php echo $satir['adi']?></td>
-            <td><?php echo $satir['soyadi']?></td>
-            <td><img src="/foto/<?php echo $satir['fotograf']?>" height="50" width="50" /></td>
-            <td><?php echo $satir['dogum_yili']?></td>
-            <td><?php echo $satir['velisi']?></td>
-            <td><?php echo $satir['veli_telefon']?></td>
-            <td><a href="/ogrenci/sil/id/<?php echo $satir['id'] ?>"><span class="glyphicon glyphicon-trash"></span></a></td>
-            <td><a href="/ogrenci/duzenle/id/<?php echo $satir['id']?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
+        <tr>
+            <td><img src="/foto/<?php echo $this->data['fotograf']?>" height="50" width="50" /></td>
+            <td><?php echo $this->data['veli_telefon']?></td>
+            <td><?php echo $this->data['adi']?></a></td>
+            <td><?php echo $this->data['soyadi']?></td>
+            <td><?php echo $this->data['dogum_yili']?></td>
+            <td><?php echo $this->data['velisi']?></td>
+            <td><?php echo $this->data['veli_telefon']?></td>
         </tr>
-    <?php endforeach?>
     </tbody>
 </table>
-<form method="post" action="/ogrenci/index">
-    <table class="table table-condensed">
-        <tr class="warning">
-            <td>Öğrenci No: </td>
-            <td><input type="text" name="ogrenci_no"></td>
-        </tr>
-        <tr>
-            <td>Ad: </td>
-            <td><input type="text" name="adi"></td>
-        </tr>
-        <tr class="warning">
-            <td>Soyad: </td>
-            <td><input type="text" name="soyadi"></td>
-        </tr>
-        <tr>
-            <td ><button type="submit" class="btn btn-success btn-sm">ARA</button> </td>
-        </tr>
-    </table>
-</form>
+
+
