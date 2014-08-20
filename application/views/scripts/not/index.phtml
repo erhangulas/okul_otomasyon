@@ -1,0 +1,19 @@
+
+<table class="table table-bordered table-stripped" >
+    <thead class="alert-warning">
+    <th>Sıra</th>
+    <th>Ders Adı</th>
+    <th>Not</th>
+    <th>Harf Notu</th>
+    </thead>
+    <tbody>
+    <?php foreach($this->data as $i=> $satir):?>
+        <tr class="success">
+            <td><a href="/not/duzenle/id/<?php echo $satir['id']?>"><?php echo $i+1?></td>
+            <td><?php echo $satir['ders_adi']?></a></td>
+            <td><?php echo $satir['notu']?></td>
+            <td><?php echo $satir['harf-notu']?></td>
+        </tr>
+    <?php endforeach?>
+    </tbody>
+</table>

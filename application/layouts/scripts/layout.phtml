@@ -11,7 +11,7 @@
     
     <script language="Javascript">
     $(function(){
-        window.setTimeout(mesajlariTemizle,3000);
+        window.setTimeout(mesajlariTemizle,2000);
     });
     
     function mesajlariTemizle(){
@@ -35,19 +35,11 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="/">Eğitim Projesi</a>
+                        <a class="navbar-brand" href="/index/index">ESIS</a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
-                        <ul class="nav navbar-nav">
-                            <li><a href="/">Anasayfa</a></li>
-                            <li><a href="/haber">Ders Duyuruları</a></li>
-                            <li><a href="/ders">Dersler</a></li>
-                            <li><a href="/odev">Ödevler</a></li>
-                             <li><a href="/sinav">Sınavlar</a></li>
-                        </ul>
-                    </div><!-- /.navbar-collapse -->
+                    <!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
             </nav>
         </div>
@@ -63,10 +55,13 @@
             <p class="bg-success" id="bilgiMesaji"><?php echo $this->bilgiMesaji ?></p>
             <p class="bg-danger" id="hataMesaji"><?php echo $this->hataMesaji ?></p>
 
+
+                <a href="/giris/logout" class="btn btn-danger btn-sm pull-right">Çıkış Yap</a>
+
             
             <div style="clear:both"></div>
             <center>
-                <div class="alert alert-info"><a href="https://twitter.com/kelevl2a">Erhan Gülas</a></div>
+                <div class="alert alert-info navbar-fixed-bottom"><a href="https://twitter.com/kelevl2a" style="color: midnightblue">Erhan Gülas</a></div>
             </center>
         </div>
     </body>

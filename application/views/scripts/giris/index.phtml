@@ -1,17 +1,36 @@
-<h3> SİSTEME GİRİŞ </h3>
+
+<head>
+    <style>
+        body {
+            background: #ffffff url("/foto/wood.jpg") ;
+        }
+        #Wrapper
+        {
+            width: 300px;
+            height: 160px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin:-80px 0 0 -150px;
+        }
+    </style>
+</head>
 <body>
+<div id="Wrapper">
+  <font color="white" ><h3> SİSTEME GİRİŞ </h3></font>
 <form method="post" action="/giris/kontrol">
 <table>
 
 <tr>
-	<td>Kullanıcı Adı</td>
+	<td style="color: white">Kullanıcı Adı</td>
 	<td><input type="text" name="kullanici_adi"></td>
 </tr>
 <tr>
-	<td>Şifre</td>
+	<td style="color: white">Şifre</td>
 	<td><input type="password" name="parola"></td>
 </tr>
 </table>
 <button type="submit" class="btn btn-success btn-sm">GİRİŞ YAP</button>
 </form>
+</div>
 </body>

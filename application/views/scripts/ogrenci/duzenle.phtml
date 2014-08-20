@@ -1,0 +1,44 @@
+
+<form enctype="multipart/form-data" action="/ogrenci/kaydet" method="post">
+    <?php if(strlen($this->data['id'])):?>
+        <input type="hidden" name="id" value="<?php echo $this->data['id']?>">
+    <?php endif;?>
+    <font color="green"><h3>DÜZENLE</h3></font>
+    <img src="/foto/<?php echo $this->data['fotograf']?>" height="110" width="110" align="left" />
+    <table class="table">
+        <tr class="success">
+            <td>Kullanici İd:</td>
+            <td><input type="text" name="kullanici_id" value="<?php echo $this->data['kullanici_id']?> "></td>
+        </tr>
+        <tr>
+            <td>Öğrenci No:</td>
+            <td><input type="text" name="ogrenci_no" value="<?php echo $this->data['ogrenci_no']?> "></td>
+        </tr>
+        <tr class="success">
+            <td>Adı:</td>
+            <td><input type="text" id="adi" name="adi" value="<?php echo $this->data['adi']?> "></td>
+        </tr>
+        <tr>
+            <td>Soyadı:</td>
+            <td><input type="text" name="soyadi" value="<?php echo $this->data['soyadi']?> "></td>
+        </tr>
+        <tr class="success">
+            <td>Doğum Yılı :</td>
+            <td><input type="text" name="dogum_yili" value="<?php echo $this->data['dogum_yili']?> "></td>
+        </tr>
+        <tr>
+            <td>Velisi:</td>
+            <td><input type="text" name="velisi" value="<?php echo $this->data['velisi'] ?> "></td>
+        </tr>
+        <tr class="success">
+            <td>Veli Telefon:</td>
+            <td><input type="text" name="veli_telefon" value="<?php echo $this->data['veli_telefon'] ?> "></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type=file name=fotograf /></td>
+        </tr>
+    </table>
+    <td><button type="submit" class="btn btn-success btn-sm glyphicon glyphicon-floppy-disk">KAYDET</button> </td>
+</form>
+<a href="/ogrenci/index" class="btn btn-warning btn-sm">ÖĞRENCİ LİSTESİ</a>
