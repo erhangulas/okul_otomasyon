@@ -11,7 +11,7 @@ class DersController extends Site_Controller_Action{
         $post = $this->getRequest()->getPost();
 
         $page=$post['page'] ? $post['page']  : 0;
-        
+
         unset($post['page']);//veritabanında page diye bir sutun yok, aramada işi bulandirmasin..
 
         $tbl = new TblDers();
