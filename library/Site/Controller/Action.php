@@ -9,6 +9,7 @@ class Site_Controller_Action extends Zend_Controller_Action{
             $this->_redirect("/giris/index");
         }
         $this->userSession = new Zend_Session_Namespace('userSession');
+        $this->view->userSession=$this->userSession;
         $this->view->bilgiMesaji=$this->userSession->bilgiMesaji;
         $this->view->hataMesaji=$this->userSession->hataMesaji;
     }

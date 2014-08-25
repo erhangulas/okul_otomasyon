@@ -27,18 +27,38 @@ class NotController extends Site_Controller_Action{
 
         $kullanici=$ses->kullanici;
 
-        $tbl=new TblOgrenciDers();
 
-        $select = $tbl->select()->where("ogrenci_id=?", $kullanici['kullanici_adi']);
+       $db=Zend_Db_Table::getDefaultAdapter();
 
-        $data=$tbl->fetchAll($select)->toArray();
+        $sql = 'SELECT od.harf_notu, od.notu, od.id, o.adi, o.soyadi, o.fotograf, o.ogrenci_no FROM tbl_ogrenci_ders od, tbl_ogrenci o, tbl_ders_ogretmen do, tbl_ogretmen og
+                WHERE do.ders_sinif_id = od.ders_sinif_id AND og.kullanici_id = do.ogretmen_id AND o.kullanici_id = od.ogrenci_id';
 
-        $this->view->data=$data[0];
+        $stmt = $db->query($sql);
+
+        $data = $stmt->fetchAll();
+
+        $this->view->data=$data;
+
     }
     public function duzenleAction(){
 
     }
     public function kaydetAction(){
+        $post=$this->getRequest()->getPost();
+
+        $tbl= new TblOgrenciDers();
+
+        //post['notu'] veya post['harf_notu'] dizileri ayni indisli elemanlara sahip
+        //iki diziden birini foreach ile donmek indisler icin kafi
+        foreach($post['notu'] as $id => $not)
+        {
+            $data['notu']=$not;
+            $data['harf_notu']=$post['harf_notu'][$id];
+            $where = $tbl->getAdapter()->quoteInto("id=?",$id);
+            $tbl->update($data,$where);
+        }
+
+        $this->_redirect("/not/giris");
 
     }
 

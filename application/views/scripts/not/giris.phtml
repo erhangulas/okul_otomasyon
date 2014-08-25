@@ -1,23 +1,45 @@
-<table class="table table-bordered table-stripped" >
+<form method="post" action="/not/kaydet">
+
+    <table class="table table-bordered table-stripped" >
 	<thead>
 		<th>Sıra</th>
+        <th>Öğrenci No.</th>
 		<th>Fotoğraf</th>
 		<th>Adı</th>
 		<th>Soyadı</th>
 		<th>Not</th>
 		<th>Harf Notu</th>
 	</thead>
-	<tbody>
+    <tbody>
+
+
 		<?php foreach($this->data as $i=> $satir):?>
     <tr>
-        <td><a href="/not/duzenle/id/<?php echo $satir['id']?>"><?php echo $i+1?></td>
+        <td><?php echo $i+1 ?></td>
+        <td><?php echo $satir['ogrenci_no']?></a></td>
         <td><img src="/foto/<?php echo $satir['fotograf']?>" height="50" width="50" /></td>
         <td><?php echo $satir['adi']?></a></td>
         <td><?php echo $satir['soyadi']?></td>
-        <td><?php echo $satir['notu']?></td>
-        <td><?php echo $satir['harf_notu']?></td>
+        <td><input type="text" name="notu[<?php echo $satir['id']?>]" value="<?php echo $satir['notu'] ?>"></td>
+        <td><select name="harf_notu[<?php echo $satir['id']?>]">
+                <option value="<?php echo $satir['harf_notu'] ?>"><?php echo $satir['harf_notu'] ?></option>
+                <option value="AA">AA</option>
+                <option value="BA">BA</option>
+                <option value="BB">BB</option>
+                <option value="CB">CB</option>
+                <option value="CC">CC</option>
+                <option value="DC">DC</option>
+                <option value="DD">DD</option>
+                <option value="FD">FD</option>
+                <option value="FF">FF</option>
+                <option value="F0">F0</option>
+            </select></td>
     </tr>
 <?php endforeach?>
-</tbody>
+
+
+     </tbody>
+
 </table>
-<input type="text" name="adi" value="<?php echo $this->data['adi'] ?>">
+<button class="btn btn-lg btn-success btn-block" type="submit">Kaydet</button>
+</form>

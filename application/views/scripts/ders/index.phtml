@@ -1,0 +1,67 @@
+<?php echo $this->data->getTotalItemCount()?>
+<?php echo $this->paginationControl($this->data, 'Sliding', 'pagination.phtml')?>
+
+<font color="green"><strong><h3><?php echo $this->baslik?></h3></strong></font>
+<a href="/ders/duzenle"><span class="glyphicon glyphicon-book"></span>Yeni Ders</a>
+<table class="table table-bordered table-stripped">
+    <thead>
+    <tr class="alert-info" >
+        <th>#</th>
+        <th>Ders ID</th>
+        <th>Branş</th>
+        <th>Ders Adı</th>
+        <th>Kredi</th>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach($this->data as $i=> $satir):?>
+        <tr class="warning">
+            <td class="alert-info"><?php echo $i+1?></td>
+            <td><?php echo $satir['id']?></td>
+            <td><?php echo $satir['brans']?></td>
+            <td><?php echo $satir['ders_adi']?></td>
+            <td><?php echo $satir['kredi']?></td>
+            <td><a href="/ders/sil/id/<?php echo $satir['id'] ?>"><span class="glyphicon glyphicon-trash"></span></a></td>
+            <td><a href="/ders/duzenle/id/<?php echo $satir['id']?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
+        </tr>
+    <?php endforeach?>
+    </tbody>
+</table>
+
+
+<?php echo $this->paginationControl($this->data, 'Elastic', 'pagination.phtml')?>
+
+
+<form method="post" action="/ders/index" id="aramaFormu">
+    <input type="hidden" name="page" value="" id="page" />
+    <table class="table table-condensed">
+        <tr class="warning">
+            <td>Ders Adı: </td>
+            <td><input type="text" name="ders_adi" value="<?php echo $this->post['ders_adi']?>"></td>
+        </tr>
+        <tr>
+            <td>Branş: </td>
+            <td><input type="text" name="brans"  value="<?php echo $this->post['brans']?>"></td>
+        </tr>
+        <tr class="warning">
+            <td>Kredi: </td>
+            <td><input type="text" name="kredi"  value="<?php echo $this->post['kredi']?>"></td>
+        </tr>
+        <tr>
+            <td ><button type="submit" class="btn btn-success btn-sm">ARA</button> </td>
+        </tr>
+    </table>
+</form>
+
+
+<script language="JavaScript">
+    function ara(page)
+    {
+        //page degerini forma kaydedip formu submit ediyoruz ki formdaki diger kriterler kaybolmadan diger sayfalara gecebilelim..
+        $("#page").val(page);
+        $("#aramaFormu").submit();
+    }
+
+</script>

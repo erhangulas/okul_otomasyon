@@ -10,7 +10,7 @@ define('ROOT_DIR', realpath(dirname(__FILE__) . '/../'));
 define("ROOT_PUBLIC",ROOT_DIR."/public/");
 define('APPLICATION_PATH', BASE_PATH . '/application');
 
-//error_reporting(E_ALL  || ~E_NOTICE);
+error_reporting(E_ALL  || ~E_NOTICE);
 //error_reporting(1);
 mb_internal_encoding("UTF-8");
 ini_set('default_charset','UTF-8');
@@ -40,6 +40,8 @@ require_once 'Zend/Loader/Autoloader.php';
 $autoloader = Zend_Loader_Autoloader::getInstance();
 $autoloader->setFallbackAutoloader(true);
 
+
+define("MAX_ROW",3);   //listelerdeki bir sayfadaki satir sayisi
 
 // Zend_Application
 require_once 'Zend/Application.php';

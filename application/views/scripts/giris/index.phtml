@@ -17,20 +17,12 @@
 </head>
 <body>
 <div id="Wrapper">
-  <font color="white" ><h3> SİSTEME GİRİŞ </h3></font>
-<form method="post" action="/giris/kontrol">
-<table>
-
-<tr>
-	<td style="color: white">Kullanıcı Adı</td>
-	<td><input type="text" name="kullanici_adi"></td>
-</tr>
-<tr>
-	<td style="color: white">Şifre</td>
-	<td><input type="password" name="parola"></td>
-</tr>
-</table>
-<button type="submit" class="btn btn-success btn-sm">GİRİŞ YAP</button>
-</form>
+    <form class="form-signin" role="form" action="/giris/kontrol" method="post">
+        <font color="white"><h2 class="form-signin-heading">SİSTEME GİRİŞ</h2></font>
+        <input type="text" class="form-control" placeholder="Kullanıcı Adı" required autofocus name="kullanici_adi">
+        <input type="password" class="form-control" placeholder="Şifre" required name="parola">
+        <br>
+        <button class="btn btn-lg btn-success btn-block" type="submit">Giriş Yap</button>
+    </form>
 </div>
 </body>

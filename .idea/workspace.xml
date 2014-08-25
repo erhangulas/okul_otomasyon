@@ -23,19 +23,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GirisController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/GirisController.php">
+      <file leaf-file-name="NotController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/NotController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="45" selection-start="1394" selection-end="1394" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1598">
-              <folding />
+            <state line="47" column="0" selection-start="1168" selection-end="1168" vertical-scroll-proportion="-13.884615" vertical-offset="438" max-vertical-offset="1190">
+              <folding>
+                <marker date="1408715004705" expanded="true" signature="640:927" placeholder="SELECT od.ha..tbl_ogrenci_ders..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.phtml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/scripts/giris/index.phtml">
+      <file leaf-file-name="Action.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/Site/Controller/Action.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="4" selection-start="12" selection-end="317" vertical-scroll-proportion="0.044854883" vertical-offset="0" max-vertical-offset="758">
+            <state line="20" column="68" selection-start="864" selection-end="864" vertical-scroll-proportion="-12.576923" vertical-offset="13" max-vertical-offset="731">
               <folding />
             </state>
           </provider>
@@ -44,35 +46,68 @@
       <file leaf-file-name="ogrenciController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/ogrenciController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="84" selection-start="962" selection-end="982" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="1479">
+            <state line="29" column="45" selection-start="755" selection-end="755" vertical-scroll-proportion="-18.961538" vertical-offset="0" max-vertical-offset="1479">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DersController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/DersController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="8" selection-start="329" selection-end="329" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="1377">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/scripts/ogrenci/index.phtml">
+        <entry file="file://$PROJECT_DIR$/application/views/scripts/ders/index.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+            <state line="22" column="42" selection-start="798" selection-end="798" vertical-scroll-proportion="3.9230769" vertical-offset="476" max-vertical-offset="1224">
+              <folding>
+                <marker date="1408973659155" expanded="true" signature="1651:1709" placeholder="..." />
+                <marker date="1408973659155" expanded="true" signature="1973:2004" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pagination.phtml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/scripts/pagination.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="62" selection-start="682" selection-end="682" vertical-scroll-proportion="0.2896936" vertical-offset="13" max-vertical-offset="799">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="duzenle.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/scripts/ogrenci/duzenle.phtml">
+      <file leaf-file-name="Helper.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/Site/Helper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="91" selection-start="1811" selection-end="1811" vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="833">
+            <state line="8" column="19" selection-start="214" selection-end="214" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="357">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IndexController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/IndexController.php">
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="39" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="527">
+            <state line="43" column="18" selection-start="1505" selection-end="1505" vertical-scroll-proportion="-6.6923075" vertical-offset="557" max-vertical-offset="1275">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="giris.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/scripts/not/giris.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="112" selection-start="609" selection-end="713" vertical-scroll-proportion="-10.846154" vertical-offset="92" max-vertical-offset="850">
+              <folding>
+                <marker date="1408712682440" expanded="true" signature="725:827" placeholder="..." />
+                <marker date="1408712682440" expanded="true" signature="777:827" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,21 +129,29 @@
         <option value="$PROJECT_DIR$/application/controllers/SuperuserController.php" />
         <option value="$PROJECT_DIR$/library/Site/Action.php" />
         <option value="$PROJECT_DIR$/application/controllers/GirisController.php" />
-        <option value="$PROJECT_DIR$/library/Site/Controller/Action.php" />
         <option value="$PROJECT_DIR$/application/controllers/adminController.php" />
         <option value="$PROJECT_DIR$/application/views/scripts/admin/index.phtml" />
-        <option value="$PROJECT_DIR$/application/controllers/ogretmenController.php" />
         <option value="$PROJECT_DIR$/application/controllers/SinifController.php" />
         <option value="$PROJECT_DIR$/application/controllers/IndexController.php" />
         <option value="$PROJECT_DIR$/application/views/scripts/index/index.phtml" />
         <option value="$PROJECT_DIR$/application/model/Viogrenciders.php" />
         <option value="$PROJECT_DIR$/application/views/scripts/not/index.phtml" />
-        <option value="$PROJECT_DIR$/application/controllers/NotController.php" />
         <option value="$PROJECT_DIR$/application/controllers/ogrenciController.php" />
         <option value="$PROJECT_DIR$/application/views/scripts/ogrenci/duzenle.phtml" />
         <option value="$PROJECT_DIR$/application/views/scripts/ogrenci/index.phtml" />
+        <option value="$PROJECT_DIR$/application/controllers/ogretmenController.php" />
+        <option value="$PROJECT_DIR$/application/views/scripts/ogretmen/index.phtml" />
+        <option value="$PROJECT_DIR$/application/views/scripts/ogretmen/duzenle.phtml" />
+        <option value="$PROJECT_DIR$/library/Site/Controller/Action.php" />
         <option value="$PROJECT_DIR$/application/layouts/scripts/layout.phtml" />
         <option value="$PROJECT_DIR$/application/views/scripts/giris/index.phtml" />
+        <option value="$PROJECT_DIR$/application/views/scripts/not/giris.phtml" />
+        <option value="$PROJECT_DIR$/application/controllers/NotController.php" />
+        <option value="$PROJECT_DIR$/library/Site/Helper.php" />
+        <option value="$PROJECT_DIR$/public/index.php" />
+        <option value="$PROJECT_DIR$/application/views/scripts/ders/index.phtml" />
+        <option value="$PROJECT_DIR$/application/views/scripts/pagination.phtml" />
+        <option value="$PROJECT_DIR$/application/controllers/DersController.php" />
       </list>
     </option>
   </component>
@@ -120,7 +163,7 @@
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1616" />
-    <option name="height" value="916" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -192,6 +235,74 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okul_otomasyon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okul_otomasyon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okul_otomasyon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okul_otomasyon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okul_otomasyon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okul_otomasyon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okul_otomasyon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okul_otomasyon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -215,58 +326,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="okul_otomasyon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="okul_otomasyon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ogrenci" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="okul_otomasyon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="okul_otomasyon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="giris" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -307,24 +366,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="okul_otomasyon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="okul_otomasyon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -384,7 +425,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="916" extended-state="7" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -400,11 +441,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962963" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962963" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -444,45 +485,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/library/Site/Controller/Action.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="20" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="612" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/giris/index.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="7" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="323">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/GirisController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="42" selection-start="699" selection-end="699" vertical-scroll-proportion="0.0" vertical-offset="245" max-vertical-offset="1275">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/model/TblYetki.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="34" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="187" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/model/TblSinif.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/giris/kontrol.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="1" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="153">
-          <folding />
-        </state>
+        <state line="3" column="1" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="153" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/library/Site/Controller/Action.php">
@@ -492,107 +497,77 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/giris/index.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="7" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="323">
-          <folding />
-        </state>
+        <state line="13" column="7" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="323" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/GirisController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="31" selection-start="623" selection-end="623" vertical-scroll-proportion="0.0" vertical-offset="41" max-vertical-offset="799">
-          <folding />
-        </state>
+        <state line="23" column="31" selection-start="623" selection-end="623" vertical-scroll-proportion="0.0" vertical-offset="41" max-vertical-offset="799" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="1" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="153">
-          <folding />
-        </state>
+        <state line="3" column="1" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="153" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/giris/index.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="7" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="323">
-          <folding />
-        </state>
+        <state line="13" column="7" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="323" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/GirisController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="31" selection-start="623" selection-end="623" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="799">
-          <folding />
-        </state>
+        <state line="23" column="31" selection-start="623" selection-end="623" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="799" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="1" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="153">
-          <folding />
-        </state>
+        <state line="3" column="1" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="153" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/giris/index.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="7" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="323">
-          <folding />
-        </state>
+        <state line="13" column="7" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="323" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/GirisController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="53" selection-start="59" selection-end="59" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
-          <folding />
-        </state>
+        <state line="1" column="53" selection-start="59" selection-end="59" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="1" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="153">
-          <folding />
-        </state>
+        <state line="3" column="1" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="153" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/giris/index.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="7" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="323">
-          <folding />
-        </state>
+        <state line="13" column="7" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="323" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/GirisController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0" vertical-offset="41" max-vertical-offset="799">
-          <folding />
-        </state>
+        <state line="26" column="0" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0" vertical-offset="41" max-vertical-offset="799" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/giris/index.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="7" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="323">
-          <folding />
-        </state>
+        <state line="13" column="7" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="323" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/GirisController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="799">
-          <folding />
-        </state>
+        <state line="26" column="0" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="799" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/giris/index.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="7" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="323">
-          <folding />
-        </state>
+        <state line="13" column="7" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="323" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/GirisController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/model/TblKullanici.php">
@@ -608,11 +583,6 @@
     <entry file="file://$PROJECT_DIR$/application/controllers/ErrorController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1071" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.3812665" vertical-offset="289" max-vertical-offset="1241" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/library/Zend/Db/Table/Abstract.php">
@@ -660,11 +630,6 @@
         <state line="5" column="39" selection-start="309" selection-end="309" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="408" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/Site/Controller/Action.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="33" selection-start="508" selection-end="508" vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="714" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/model/TblDersSinif.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="784" />
@@ -680,69 +645,123 @@
         <state line="7" column="0" selection-start="134" selection-end="134" vertical-scroll-proportion="0.1614654" vertical-offset="0" max-vertical-offset="737" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/not/index.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="31" selection-start="85" selection-end="85" vertical-scroll-proportion="0.044854883" vertical-offset="0" max-vertical-offset="758" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/ogretmenController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="27" selection-start="645" selection-end="645" vertical-scroll-proportion="-21.576923" vertical-offset="0" max-vertical-offset="714" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="39" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="527">
-          <folding />
-        </state>
+        <state line="13" column="39" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="527" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/ogrenci/duzenle.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="1918" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="833" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/ogretmen/duzenle.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="18" selection-start="1499" selection-end="1499" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="714" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="61" selection-start="2457" selection-end="2457" vertical-scroll-proportion="0.6728232" vertical-offset="476" max-vertical-offset="1241" />
+        <state line="42" column="48" selection-start="1970" selection-end="1970" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="1241" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/not/giris.phtml">
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/ogretmen/index.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="11" selection-start="61" selection-end="61" vertical-scroll-proportion="0.022427442" vertical-offset="0" max-vertical-offset="758" />
+        <state line="12" column="12" selection-start="442" selection-end="442" vertical-scroll-proportion="-6.5384617" vertical-offset="34" max-vertical-offset="952" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/NotController.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/ogretmenController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="269" selection-end="269" vertical-scroll-proportion="0.14775726" vertical-offset="92" max-vertical-offset="850" />
+        <state line="30" column="32" selection-start="791" selection-end="791" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1462" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/not/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="31" selection-start="85" selection-end="85" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="408" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/GirisController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="45" selection-start="1394" selection-end="1394" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1598">
+        <state line="10" column="47" selection-start="180" selection-end="219" vertical-scroll-proportion="0.31233597" vertical-offset="51" max-vertical-offset="1598" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/giris/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="89" selection-start="753" selection-end="834" vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="578" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/ogrenci/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="7" selection-start="0" selection-end="2074" vertical-scroll-proportion="0.9551451" vertical-offset="194" max-vertical-offset="1020" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/not/giris.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="112" selection-start="609" selection-end="713" vertical-scroll-proportion="-10.846154" vertical-offset="92" max-vertical-offset="850">
+          <folding>
+            <marker date="1408712682440" expanded="true" signature="725:827" placeholder="..." />
+            <marker date="1408712682440" expanded="true" signature="777:827" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Site/Controller/Action.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="68" selection-start="864" selection-end="864" vertical-scroll-proportion="-12.576923" vertical-offset="13" max-vertical-offset="731">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/ogrenciController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="84" selection-start="962" selection-end="982" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="1479">
+        <state line="29" column="45" selection-start="755" selection-end="755" vertical-scroll-proportion="-18.961538" vertical-offset="0" max-vertical-offset="1479">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/ogrenci/duzenle.phtml">
+    <entry file="file://$PROJECT_DIR$/application/controllers/NotController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="91" selection-start="1811" selection-end="1811" vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="833">
+        <state line="47" column="0" selection-start="1168" selection-end="1168" vertical-scroll-proportion="-13.884615" vertical-offset="438" max-vertical-offset="1190">
+          <folding>
+            <marker date="1408715004705" expanded="true" signature="640:927" placeholder="SELECT od.ha..tbl_ogrenci_ders..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="18" selection-start="1505" selection-end="1505" vertical-scroll-proportion="-6.6923075" vertical-offset="557" max-vertical-offset="1275">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/ogrenci/index.phtml">
+    <entry file="file://$PROJECT_DIR$/library/Site/Helper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+        <state line="8" column="19" selection-start="214" selection-end="214" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="357">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/giris/index.phtml">
+    <entry file="file://$PROJECT_DIR$/application/controllers/DersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="4" selection-start="12" selection-end="317" vertical-scroll-proportion="0.044854883" vertical-offset="0" max-vertical-offset="758">
+        <state line="13" column="8" selection-start="329" selection-end="329" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="1377">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/ders/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="42" selection-start="798" selection-end="798" vertical-scroll-proportion="3.9230769" vertical-offset="476" max-vertical-offset="1224">
+          <folding>
+            <marker date="1408973659155" expanded="true" signature="1651:1709" placeholder="..." />
+            <marker date="1408973659155" expanded="true" signature="1973:2004" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/pagination.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="62" selection-start="682" selection-end="682" vertical-scroll-proportion="0.2896936" vertical-offset="13" max-vertical-offset="799">
           <folding />
         </state>
       </provider>

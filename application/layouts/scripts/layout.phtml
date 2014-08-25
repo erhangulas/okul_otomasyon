@@ -55,9 +55,9 @@
             <p class="bg-success" id="bilgiMesaji"><?php echo $this->bilgiMesaji ?></p>
             <p class="bg-danger" id="hataMesaji"><?php echo $this->hataMesaji ?></p>
 
-
+            <?php if($this->userSession):?>
                 <a href="/giris/logout" class="btn btn-danger btn-sm pull-right">Çıkış Yap</a>
-
+            <?php endif;?>
             
             <div style="clear:both"></div>
             <center>

@@ -1,0 +1,37 @@
+
+<form enctype="multipart/form-data" action="/ogretmen/kaydet" method="post">
+    <?php if(strlen($this->data['id'])):?>
+        <input type="hidden" name="id" value="<?php echo $this->data['id']?>">
+    <?php endif;?>
+    <font color="green"><h3>DÜZENLE</h3></font>
+    <img src="/foto/<?php echo $this->data['fotograf']?>" height="110" width="110" align="left" />
+    <table class="table">
+        <tr class="success">
+            <td>Kullanici ID:</td>
+            <td><input type="text" name="kullanici_id" value="<?php echo $this->data['kullanici_id']?> "></td>
+        </tr>
+        <tr>
+            <td>Branş:</td>
+            <td><input type="text" name="brans" value="<?php echo $this->data['brans']?> "></td>
+        </tr>
+        <tr class="success">
+            <td>Adı:</td>
+            <td><input type="text" id="adi" name="adi" value="<?php echo $this->data['adi']?> "></td>
+        </tr>
+        <tr>
+            <td>Soyadı:</td>
+            <td><input type="text" name="soyadi" value="<?php echo $this->data['soyadi']?> "></td>
+        </tr>
+        <tr class="success">
+            <td>E-posta:</td>
+            <td><input type="text" name="eposta" value="<?php echo $this->data['eposta']?> "></td>
+        </tr>
+        <tr>
+            <td>Fotoğraf:</td>
+            <td><input type=file name=fotograf /></td>
+        </tr>
+
+    </table>
+    <td><button type="submit" class="btn btn-success btn-sm glyphicon glyphicon-floppy-disk">KAYDET</button> </td>
+</form>
+<a href="/ogretmen/index" class="btn btn-warning btn-sm">ÖĞRETMEN LİSTESİ</a>
