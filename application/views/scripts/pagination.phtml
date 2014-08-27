@@ -9,34 +9,36 @@
             Viewing page <strong class="current"><?= $this->current; ?></strong> of <strong class="last"><?= $this->last; ?></strong>
         </div>
         <div class="paginationControl_pages">
+            <ul class="pagination">
             <!-- Previous page link -->
             <?php if (isset($this->previous)): ?>
-                <a href="javascript:void(0)" onclick="ara(<?php echo $this->previous ?>)" class="previous" >&lt; Previous</a> |
+             <li><a href="javascript:void(0)" onclick="ara(<?php echo $this->previous ?>)" class="previous" >&lt; Previous</a></li>
             <?php else: ?>
-                <span class="disabled">&lt; Previous</span> |
+               <li><span class="disabled">&lt; Previous</span> |</li>
             <?php endif; ?>
             <?php if (($this->current - $midRange) > $this->first): ?>
                 <?php array_shift($this->pagesInRange);?>
-                <a href="javascript:void(0)" onclick="ara(<?php echo $this->first ?>)" ><?php echo $this->first ?></a>... |
+             <li><a href="javascript:void(0)" onclick="ara(<?php echo $this->first ?>)" ><?php echo $this->first ?></a></li>
             <?php endif; ?>
             <!-- Numbered page links -->
             <?php foreach ($this->pagesInRange as $page): ?>
 
                 <?php if ($page != $this->current): ?>
-                    <a href="javascript:void(0)" onclick="ara(<?php echo $page; ?>)" ><?= $page; ?></a> |
+                    <li><a href="javascript:void(0)" onclick="ara(<?php echo $page; ?>)" ><?php echo $page; ?></a></li>
                 <?php else: ?>
-                    <strong><?= $page; ?></strong> |
+                   <li><strong><?php echo $page; ?></strong></li>
                 <?php endif; ?>
             <?php endforeach; ?>
             <?php if (!empty($display_end)) : ?>
-                ...<a href="javascript:void(0)" onclick="ara(<?php echo $this->last; ?>)" ><?php echo $this->last ?></a> |
+               <li><a href="javascript:void(0)" onclick="ara(<?php echo $this->last; ?>)" ><?php echo $this->last ?></a></li>
             <?php endif; ?>
             <!-- Next page link -->
             <?php if (isset($this->next)): ?>
-                <a href="javascript:void(0)" onclick="ara(<?php echo $this->next; ?>)" class="next">Next &gt;</a>
+                <li><a href="javascript:void(0)" onclick="ara(<?php echo $this->next; ?>)" class="next">Next &gt;</a></li>
             <?php else: ?>
-                <span class="disabled">Next &gt;</span>
+                <li><span class="disabled">Next &gt;</span></li>
             <?php endif; ?>
+            </ul>
         </div>
     </div>
 <?php endif; ?>

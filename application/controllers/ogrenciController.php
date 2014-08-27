@@ -25,6 +25,7 @@ class ogrenciController extends Site_Controller_Action{
         $this->view->data = $data;
 
 
+
     }
     public function kaydetAction(){
         $post=$this->getRequest()->getPost();
@@ -77,6 +78,18 @@ class ogrenciController extends Site_Controller_Action{
 
     }
     public function dersekleAction(){
+        $id=$this->getRequest()->getParam('id');
+        $tbl = new TblOgrenci();
+        $select=$tbl->select()->where("id=?",$id);
+        $data = $tbl->fetchAll($select)->toArray();
+        $this->view->data = $data;
+        $kullanici_id=$data['kullanici_id'];
+        $db=Zend_Db_Table::getDefaultAdapter();
+        $sql='SELECT d.ders_adi FROM tbl_ders d, tbl_ders_sinif ds,tbl_ogrenci_ders od, tbl_ogrenci o
+        WHERE o.kullanici_id=od.ogrenci_id AND od.ders_sinif_id=ds.id AND ds.ders_id=d.id';
+        $stmt=$db->query($sql);
+        $data1=$stmt->fetchAll();
+        $this->view->data1=$data1;
 
     }
 }

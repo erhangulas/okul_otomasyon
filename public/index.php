@@ -41,7 +41,7 @@ $autoloader = Zend_Loader_Autoloader::getInstance();
 $autoloader->setFallbackAutoloader(true);
 
 
-define("MAX_ROW",3);   //listelerdeki bir sayfadaki satir sayisi
+define("MAX_ROW",5);   //listelerdeki bir sayfadaki satir sayisi
 
 // Zend_Application
 require_once 'Zend/Application.php';

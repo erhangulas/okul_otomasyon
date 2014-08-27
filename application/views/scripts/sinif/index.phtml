@@ -1,0 +1,70 @@
+<form>
+    <h2><?php echo $this->baslik ?></h2>
+    <td><select name="sinif_adi" onchange="subeGetir(this.value)">
+        <option value="">Sınıf</option>
+        <?php foreach($this->data as $data ):?>
+        <option id="sinif_id" value="<?php echo $data['id'] ?>"><?php echo $data['sinif_adi'] ?></option>
+        <?php endforeach;?>
+    </select></td>
+    <td><select name="sube_adi" id="sube_adi">
+            <option value="">Şube</option>
+            <?php foreach($this->data as $data1 ):?>
+                <option value="<?php echo $data1['id'] ?>"><?php echo $data1['sube_adi'] ?></option>
+            <?php endforeach;?>
+        </select></td>
+
+</form>
+
+<div id="ogrenciListesi">
+
+</div>
+
+
+
+<script language="Javascript">
+
+    function subeGetir(sinif_id)
+    {
+        $.ajax({
+            url:'/sinif/ajaxsubegetir/id/'+sinif_id,
+            type:'get',
+            dataType:'json'
+        }).done(function(data){
+           $("select[name=sube_adi] option").remove();
+            $("select[name=sube_adi]").append("<option value=''>Şube Adı</option>");
+            for(i in data)
+            {
+                $("select[name=sube_adi]").append("<option value='"+data[i].id+"'>"+data[i].sube_adi+"</option>");
+            }
+
+        });
+    }
+
+
+
+</script>
+
+<script language="JavaScript">
+
+    $(function(){
+       $("#sube_adi").on("change", function(){
+           listeGetir($(this).val());
+       }) ;
+    });
+    function listeGetir(sube_id)
+    {
+        $.ajax(
+            {
+                url:'/sinif/ajaxlistegetir/sube_id/'+sube_id,
+                type:'get',
+                dataType:'json'
+            }
+        ).done(function(sonuc){
+            $("#ogrenciListesi").html("");
+            if(!sonuc.err)
+                $("#ogrenciListesi").html(sonuc.data);
+            else
+                alert(sonuc.msg);
+    });
+    }
+</script>

@@ -1,0 +1,32 @@
+<form method="POST" action="/ders/dersekle">
+<table class="table table-bordered table-stripped">
+    <thead>
+    <tr class="alert-info" >
+        <th>Fotoğraf</th>
+        <th>Kullanıcı ID</th>
+        <th>Öğrenci No</th>
+        <th>Adı</th>
+        <th>Soyadı</th>
+        <th>Aldığı Dersler</th>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="warning">
+            <td><img src="/foto/<?php echo $this->data['fotograf']?>" height="50" width="50" /></td>
+            <td><?php echo $this->data['kullanici_id']?></td>
+            <td><?php echo $this->data['ogrenci_no']?></td>
+            <td><?php echo $this->data['adi']?></td>
+            <td><?php echo $this->data['soyadi']?></td>
+            <td><select name="dersler">
+                    <option value="">Aldığı Dersler</option>
+                    <?php foreach($this->data1 as $data ):?>
+                        <option ><?php echo $data['ders_adi'] ?></option>
+                    <?php endforeach;?>
+                </select></td>
+
+        </tr>
+    </tbody>
+</table>
+</form>

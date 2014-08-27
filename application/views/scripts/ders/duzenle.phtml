@@ -1,0 +1,23 @@
+
+<form  action="/ders/kaydet" method="post">
+    <?php if(strlen($this->data['id'])):?>
+        <input type="hidden" name="id" value="<?php echo $this->data['id']?>">
+    <?php endif;?>
+    <font color="green"><h3>DÜZENLE</h3></font>
+    <table class="table">
+        <tr>
+            <td>Ders Adı:</td>
+            <td><input type="text" name="ders_adi" value="<?php echo $this->data['ders_adi']?> "></td>
+        </tr>
+        <tr class="success">
+            <td>Branş:</td>
+            <td><input type="text" id="brans" name="brans" value="<?php echo $this->data['brans']?> "></td>
+        </tr>
+        <tr>
+            <td>Kredi:</td>
+            <td><input type="text" name="kredi" value="<?php echo $this->data['kredi']?> "></td>
+        </tr>
+    </table>
+    <td><button type="submit" class="btn btn-success btn-sm glyphicon glyphicon-floppy-disk">KAYDET</button> </td>
+</form>
+<a href="/ders/index" class="btn btn-warning btn-sm">DERS LİSTESİ</a>

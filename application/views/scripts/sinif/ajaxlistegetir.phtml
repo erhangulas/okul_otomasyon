@@ -1,0 +1,30 @@
+
+<?php if(sizeof($this->data)):?>
+    <table class="table table-bordered table-stripped" >
+        <thead>
+        <th>Sıra</th>
+        <th>Fotoğraf</th>
+        <th>Öğrenci No.</th>
+        <th>Adı</th>
+        <th>Soyadı</th>
+        </thead>
+        <tbody>
+
+        <?php // print_r($this->data); ?>
+        <?php foreach($this->data as $i=> $satir):?>
+            <tr>
+                <td><?php echo $i+1 ?></td>
+                <td><img src="/foto/<?php echo $satir['fotograf']?>" height="50" width="50" /></td>
+                <td><?php echo $satir['ogrenci_no']?></a></td>
+                <td><?php echo $satir['adi']?></a></td>
+                <td><?php echo $satir['soyadi']?></td>
+            </tr>
+        <?php endforeach?>
+
+
+        </tbody>
+
+    </table>
+<?php else:?>
+    <h3>Bu şubede öğrenci bulunamadı.</h3>
+<?php endif?>
