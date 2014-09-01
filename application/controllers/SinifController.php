@@ -17,18 +17,7 @@ class SinifController extends Site_Controller_Action{
 
 
     }
-    public function ekleAction(){
 
-    }
-    public function silAction(){
-
-    }
-    public function duzenleAction(){
-
-    }
-    public function subeataAction(){
-
-    }
     public function ogrenciataAction(){
 
     }

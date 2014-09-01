@@ -82,14 +82,109 @@ class ogrenciController extends Site_Controller_Action{
         $tbl = new TblOgrenci();
         $select=$tbl->select()->where("id=?",$id);
         $data = $tbl->fetchAll($select)->toArray();
-        $this->view->data = $data;
-        $kullanici_id=$data['kullanici_id'];
+        $this->view->data = $data[0];
+        $kullanici_id=$data[0]['kullanici_id'];
         $db=Zend_Db_Table::getDefaultAdapter();
-        $sql='SELECT d.ders_adi FROM tbl_ders d, tbl_ders_sinif ds,tbl_ogrenci_ders od, tbl_ogrenci o
-        WHERE o.kullanici_id=od.ogrenci_id AND od.ders_sinif_id=ds.id AND ds.ders_id=d.id';
+
+        $sql='SELECT d.ders_adi, ds.id FROM tbl_ders d, tbl_ders_sinif ds,tbl_ogrenci_ders od, tbl_ogrenci o
+        WHERE o.kullanici_id=od.ogrenci_id AND od.ders_sinif_id=ds.id AND ds.ders_id=d.id AND o.id='.$id;
         $stmt=$db->query($sql);
         $data1=$stmt->fetchAll();
         $this->view->data1=$data1;
+        $ids = array();
+        foreach($data1 as $d_id=>$id) {
 
+            $ids[] = $id['id'];
+        }
+        if(sizeof($ids)){
+           /* $tblDS = new TblDersSinif();
+            $select2 = $tblDS->select()->where("id NOT IN(?)", $ids);
+            $data2 = $tblDS->fetchAll($select2)->toArray();*/
+            try{
+
+
+
+            $sql1='SELECT ds.* FROM  tbl_ders_sinif ds, tbl_ogrenci_sube os, tbl_sinif_sube ss, tbl_ogrenci_ders od
+            WHERE '.$kullanici_id.'=os.ogrenci_id AND os.ogrenci_id=od.ogrenci_id AND os.sube_id=ss.id  AND ds.sinif_id=ss.sinif_id AND ds.id NOT IN('.implode(",",$ids).')';
+            $stmt1=$db->query($sql1);
+            $data2=$stmt1->fetchAll();
+            $ids = array();
+            foreach($data2 as $d_id=>$id) {
+
+                $ids[] = $id['ders_id'];
+            }
+            $tbl=new TblDers();
+            $select2=$tbl->select()->where("id IN(?)",$ids);
+            $data2= $tbl->fetchAll($select2)->toArray();
+            $this->view->data2=$data2;
+            }
+            catch(Zend_Db_Exception $e){
+               echo $e->getMessage();exit;
+            }
+
+        }
+        else{
+            try{
+            $sql1='SELECT ds.* FROM  tbl_ders_sinif ds, tbl_ogrenci o, tbl_ogrenci_sube os, tbl_sinif_sube ss
+        WHERE o.kullanici_id=os.ogrenci_id AND o.kullanici_id=os.ogrenci_id AND os.sube_id=ss.id  AND ds.sinif_id=ss.sinif_id AND o.id='.$id;
+            $stmt1=$db->query($sql1);
+            $data2=$stmt1->fetchAll();
+            foreach($data2 as $d_id=>$id) {
+
+                $ids[] = $id['ders_id'];
+            }
+            $tbl=new TblDers();
+            $select2=$tbl->select()->where("id IN(?)",$ids);
+            $data2= $tbl->fetchAll($select2)->toArray();
+            $this->view->data2=$data2;
+            }
+            catch(Zend_Db_Exception $e){
+                echo $e->getMessage();exit;
+            }
+        }
+
+        /*$sql1='SELECT ds.id FROM  tbl_ders_sinif ds, tbl_ogrenci o, tbl_ogrenci_sube os, tbl_sinif_sube ss
+        WHERE o.kullanici_id=os.ogrenci_id AND o.kullanici_id=os.ogrenci_id AND os.sube_id=ss.id  AND ds.sinif_id=ss.sinif_id AND o.id='.$id;
+        $stmt1=$db->query($sql1);
+        $data2=$stmt1->fetchAll();
+
+        $this->view->data2=$data2;
+
+
+            $sql1='SELECT ds.* FROM  tbl_ders_sinif ds, tbl_ogrenci_sube os, tbl_sinif_sube ss, tbl_ogrenci_ders od
+            WHERE '.$kullanici_id.'=os.ogrenci_id AND os.ogrenci_id=od.ogrenci_id AND os.sube_id=ss.id  AND ds.sinif_id=ss.sinif_id AND ds.id NOT IN(?)'.$ids;
+            $stmt1=$db->query($sql1);
+            $data2=$stmt1->fetchAll();*/
+
+    }
+    public function derskaydetAction(){
+        $post=$this->getRequest()->getPost();
+        if($post){
+            $tbl=new TblOgrenci();
+            $select=$tbl->select()->where("id=?",$post['id']);
+            $data = $tbl->fetchAll($select)->toArray()[0];
+
+            $ogrenci_id=$data['kullanici_id'];
+            $tblDS= new TblDersSinif();
+            $select=$tblDS->select()->where("ders_id=?",$post['ders_id']);
+            $data1 = $tbl->fetchAll($select)->toArray()[0];
+            $ds_id=$data1['id'];
+            $data=array(
+                'ogrenci_id'=>$ogrenci_id,
+                'ders_sinif_id'=>$ds_id
+            );
+            $tbl=new TblOgrenciDers();
+
+            if($tbl->insert($data)){
+                $this->userSession->bilgiMesaji="Ders Ekleme İşlemi Gerçekleştirildi.";
+                $this->_redirect("/ogrenci/index");
+            }
+            else{
+                $this->userSession->hataMesaji="Ders Ekleme başarısız";
+                $this->_redirect("/ogrenci/index");
+              }
+
+
+        }
     }
 }

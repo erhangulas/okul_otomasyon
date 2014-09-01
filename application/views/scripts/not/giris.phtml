@@ -3,8 +3,9 @@
     <table class="table table-bordered table-stripped" >
 	<thead>
 		<th>Sıra</th>
+        <th>Ders Adı</th>
         <th>Öğrenci No.</th>
-		<th>Fotoğraf</th>
+        <th>Fotoğraf</th>
 		<th>Adı</th>
 		<th>Soyadı</th>
 		<th>Not</th>
@@ -16,6 +17,7 @@
 		<?php foreach($this->data as $i=> $satir):?>
     <tr>
         <td><?php echo $i+1 ?></td>
+        <td><?php echo $satir['ders_adi']?></a></td>
         <td><?php echo $satir['ogrenci_no']?></a></td>
         <td><img src="/foto/<?php echo $satir['fotograf']?>" height="50" width="50" /></td>
         <td><?php echo $satir['adi']?></a></td>

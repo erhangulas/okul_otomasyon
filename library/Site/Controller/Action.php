@@ -12,6 +12,9 @@ class Site_Controller_Action extends Zend_Controller_Action{
         $this->view->userSession=$this->userSession;
         $this->view->bilgiMesaji=$this->userSession->bilgiMesaji;
         $this->view->hataMesaji=$this->userSession->hataMesaji;
+        $this->view->bilgiMesaji="";
+        $this->view->hataMesaji="";
+
     }
     public function preDispatch(){
         $this->userSession = new Zend_Session_Namespace('userSession');

@@ -1,32 +1,57 @@
-<form method="POST" action="/ders/dersekle">
-<table class="table table-bordered table-stripped">
-    <thead>
-    <tr class="alert-info" >
-        <th>Fotoğraf</th>
-        <th>Kullanıcı ID</th>
-        <th>Öğrenci No</th>
-        <th>Adı</th>
-        <th>Soyadı</th>
-        <th>Aldığı Dersler</th>
-        <th></th>
-        <th></th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="warning">
-            <td><img src="/foto/<?php echo $this->data['fotograf']?>" height="50" width="50" /></td>
+
+<form enctype="multipart/form-data" action="/ogrenci/derskaydet" method="post">
+    <?php if(strlen($this->data['id'])):?>
+        <input type="hidden" name="id" value="<?php echo $this->data['id']?>">
+    <?php endif;?>
+    <?php if(strlen($this->data2['id'])):?>
+        <input type="hidden" name="ders_id" value="<?php echo $this->data2['id']?>">
+    <?php endif;?>
+    <font color="green"><h3>DERS EKLE</h3></font>
+    <img src="/foto/<?php echo $this->data['fotograf']?>" height="110" width="110" align="left" />
+    <table class="table">
+        <tr class="success">
+            <td>Kullanici ID:</td>
             <td><?php echo $this->data['kullanici_id']?></td>
-            <td><?php echo $this->data['ogrenci_no']?></td>
-            <td><?php echo $this->data['adi']?></td>
+        </tr>
+        <tr>
+            <td>Öğrenci No:</td>
+            <td><?php echo $this->data['ogrenci_no']?> </td>
+        </tr>
+        <tr class="success">
+            <td>Adı:</td>
+            <td><?php echo $this->data['adi']?> </td>
+        </tr>
+        <tr>
+            <td>Soyadı:</td>
             <td><?php echo $this->data['soyadi']?></td>
-            <td><select name="dersler">
+        </tr>
+        <tr class="success">
+            <td>Doğum Yılı :</td>
+            <td><?php echo $this->data['dogum_yili']?></td>
+        </tr>
+
+
+        <tr>
+            <td>Aldığı Dersler:</td>
+            <td><select>
                     <option value="">Aldığı Dersler</option>
                     <?php foreach($this->data1 as $data ):?>
                         <option ><?php echo $data['ders_adi'] ?></option>
                     <?php endforeach;?>
                 </select></td>
+        </tr>
+        <tr class="success">
+            <td>Ders Ekle:</td>
+            <td><select name="ders_id">
+                    <option value="">Yeni Ders</option>
+                    <?php foreach($this->data2 as $data ):?>
+                        <option value="<?php echo $data['id'] ?>"><?php echo $data['ders_adi'] ?></option>
+                    <?php endforeach;?>
+                </select></td>
+            <td><button type="submit" class="btn btn-success btn-sm glyphicon glyphicon-floppy-disk">Ekle</button> </td>
 
         </tr>
-    </tbody>
-</table>
+
+    </table>
 </form>
+<a href="/ogrenci/index" class="btn btn-warning btn-sm">ÖĞRENCİ LİSTESİ</a>
