@@ -1,0 +1,52 @@
+<font color="green"><strong><h3><?php echo $this->baslik?></h3></strong></font>
+<a href="/admin/duzenle"><span class="glyphicon glyphicon-user"></span>Yeni Admin</a>
+<table class="table table-bordered table-stripped">
+    <thead>
+    <tr class="alert-info" >
+        <th>#</th>
+        <th>Kullanıcı Adı</th>
+        <th>Adı</th>
+        <th>Soyadı</th>
+        <th>Durum</th>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach($this->data as $i=> $satir):?>
+        <tr class="warning">
+            <td class="alert-info"><?php echo $i+1?></td>
+            <td><?php echo $satir['kullanici_adi']?></td>
+            <td><?php echo $satir['adi']?></td>
+            <td><?php echo $satir['soyadi']?></td>
+            <td><?php echo $satir['durum']?></td>
+
+            <td><a href="/admin/sil/id/<?php echo $satir['id'] ?>"><span class="glyphicon glyphicon-trash"></span></a></td>
+            <td><a href="/admin/duzenle/id/<?php echo $satir['id']?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
+        </tr>
+    <?php endforeach?>
+    </tbody>
+</table>
+<form method="post" action="/admin/index">
+    <table class="table table-condensed">
+        <tr class="warning">
+            <td>Kullanıcı Adı: </td>
+            <td><input type="text" name="kullanici_adi"></td>
+        </tr>
+        <tr>
+            <td>Ad: </td>
+            <td><input type="text" name="adi"></td>
+        </tr>
+        <tr class="warning">
+            <td>Soyad: </td>
+            <td><input type="text" name="soyadi"></td>
+        </tr>
+        <tr>
+            <td>Durum: </td>
+            <td><input type="text" name="durum"></td>
+        </tr>
+        <tr>
+            <td ><button type="submit" class="btn btn-success btn-sm">ARA</button> </td>
+        </tr>
+    </table>
+</form>

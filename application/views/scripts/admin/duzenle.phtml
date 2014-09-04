@@ -1,0 +1,35 @@
+
+<form action="/admin/kaydet" method="post">
+    <?php if(strlen($this->data['id'])):?>
+        <input type="hidden" name="id" value="<?php echo $this->data['id']?>">
+    <?php endif;?>
+    <font color="green"><h3>DÜZENLE</h3></font>
+    <table class="table">
+        <tr class="success">
+            <td>Kullanici Adı:</td>
+            <td><input type="text" name="kullanici_adi" value="<?php echo $this->data['kullanici_adi']?> "></td>
+        </tr>
+        <tr>
+            <td>Parola:</td>
+            <td><input type="text" name="parola" value="<?php echo $this->data['parola']?> "></td>
+        </tr>
+        <tr class="success">
+            <td>Adı:</td>
+            <td><input type="text" id="adi" name="adi" value="<?php echo $this->data['adi']?> "></td>
+        </tr>
+        <tr>
+            <td>Soyadı:</td>
+            <td><input type="text" name="soyadi" value="<?php echo $this->data['soyadi']?> "></td>
+        </tr>
+        <tr>
+            <td>Durum:</td>
+            <td><select name="durum" class="success" >
+                    <option value="<?php echo $this->data['durum'] ?>" selected><?php echo $this->data['durum'] ?></option>
+                    <option value="Aktif">Aktif</option>
+                    <option value="Pasif">Pasif</option>
+                </select></td>
+        </tr>
+    </table>
+    <td><button type="submit" class="btn btn-success btn-sm glyphicon glyphicon-floppy-disk">KAYDET</button> </td>
+</form>
+<a href="/admin/index" class="btn btn-warning btn-sm">ADMİN LİSTESİ</a>

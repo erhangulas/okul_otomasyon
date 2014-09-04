@@ -37,10 +37,26 @@ class ogrenciController extends Site_Controller_Action{
         }
 //$id = $this->getRequest()->getParam('id');
         $id=$post['id'];//.unset(post['id']);
+        $post1=$post;
+        $durum=$post['durum'];
+        $parola=$post['parola'];
         unset($post['id']);
+        unset($post['durum']);
+        unset($post['parola']);
         if($id){
             $where = $tbl->getAdapter()->quoteInto("id=?",$id);
             if($tbl->update($post,$where)){
+                $tbl1= new TblKullanici();
+                unset($post1['id']);
+                unset($post1['fotograf']);
+                unset($post1['dogum_yili']);
+                unset($post1['velisi']);
+                unset($post1['veli_telefon']);
+                unset($post1['kullanici_id']);
+                unset($post1['ogrenci_no']);
+                unset($post1['k_id']);
+                $where = $tbl1->getAdapter()->quoteInto("id=?",$post['k_id']);
+                $tbl1->update($post1,$where);
                 $this->userSession->bilgiMesaji="Güncelleme İşlemi Gerçekleştirildi.";
             }
             else
@@ -48,11 +64,22 @@ class ogrenciController extends Site_Controller_Action{
         }
         else{
             $id=$tbl->insert($post);
+            $tbl2= new TblKullanici();
+            $data=array(
+                'kullanici_adi' => $post['kullanici_id'],
+                'parola'        => $parola,
+                'adi'           => $post['adi'],
+                'soyadi'        => $post['soyadi'],
+                'durum'         => $durum,
+                'grup_kodu'     => '3'
+            );
+            $tbl2->insert($data);
             if($id)
                 $this->userSession->bilgiMesaji="Kaydetme İşlemi Gerçekleştirildi.";
             else
                 $this->userSession->hataMesaji="Kaydetme başarısız";
         }
+
         $this->_redirect("/ogrenci/duzenle/id/".$id);
 
     }
@@ -69,11 +96,15 @@ class ogrenciController extends Site_Controller_Action{
     public function duzenleAction(){
         $id=$this->getRequest()->getParam("id"); //parametreyi aldik
         $tbl = new TblOgrenci();
+        $tbl1 = new TblKullanici();
         if($id)
         {
             $select = $tbl->select()->where("id=?", $id);
             $data=$tbl->fetchAll($select)->toArray();
             $this->view->data=$data[0];
+            $select1 = $tbl1->select()->where("kullanici_adi=?",$data[0]['kullanici_id']);
+            $data1=$tbl1->fetchAll($select1)->toArray();
+            $this->view->data1=$data1[0];
         }
 
     }

@@ -2,6 +2,7 @@
 <form enctype="multipart/form-data" action="/ogrenci/kaydet" method="post">
     <?php if(strlen($this->data['id'])):?>
         <input type="hidden" name="id" value="<?php echo $this->data['id']?>">
+        <input type="hidden" name="k_id" value="<?php echo $this->data1['k_id']?>">
     <?php endif;?>
     <font color="green"><h3>DÜZENLE</h3></font>
     <img src="/foto/<?php echo $this->data['fotograf']?>" height="110" width="110" align="left" />
@@ -37,6 +38,18 @@
         <tr>
             <td></td>
             <td><input type=file name=fotograf /></td>
+        </tr>
+        <tr class="success">
+            <td>Şifre:</td>
+            <td><input type="text" name="parola" value="<?php echo $this->data1['parola'] ?> "></td>
+        </tr>
+        <tr>
+        <td>Durum:</td>
+        <td><select name="durum" >
+                <option value="<?php echo $this->data1['durum'] ?>" selected><?php echo $this->data1['durum'] ?></option>
+                <option value="Aktif">Aktif</option>
+                <option value="Pasif">Pasif</option>
+            </select></td>
         </tr>
     </table>
     <td><button type="submit" class="btn btn-success btn-sm glyphicon glyphicon-floppy-disk">KAYDET</button> </td>

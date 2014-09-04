@@ -36,6 +36,8 @@
                             <span class="icon-bar"></span>
                         </button>
                         <a class="navbar-brand" href="/index/index">ESIS</a>
+                        <a class="navbar-brand pull-right" >Hoşgeldin <?php echo $this->userSession->kullanici['adi'];?> <?php echo $this->userSession->kullanici['soyadi'];  ?></a>
+
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -58,11 +60,13 @@
             <?php if($this->userSession):?>
                 <a href="/giris/logout" class="btn btn-danger btn-sm pull-right">Çıkış Yap</a>
             <?php endif;?>
-            
+            <?php if(!$this->userSession):?>
             <div style="clear:both"></div>
             <center>
                 <div class="alert alert-info navbar-fixed-bottom"><a href="https://twitter.com/kelevl2a" style="color: midnightblue">Erhan Gülas</a></div>
             </center>
         </div>
+        <?php endif;?>
+
     </body>
 </html>

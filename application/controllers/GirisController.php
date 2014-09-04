@@ -15,7 +15,7 @@ class GirisController extends Zend_Controller_Action{
 					->setIdentityColumn("kullanici_adi")
 					->setCredentialColumn("parola")
 					->setIdentity($post['kullanici_adi'])
-					->setCredential(md5($post['parola']));
+					->setCredential($post['parola']);
 					
 		$auth= Zend_Auth::getInstance();
 

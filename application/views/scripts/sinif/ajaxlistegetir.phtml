@@ -1,5 +1,9 @@
 
 <?php if(sizeof($this->data)):?>
+    <form method="post" action="/sinif/ogrenciata">
+        <?php if(strlen($this->data['sube_id'])):?>
+            <input type="hidden" name="sube_id" value="<?php echo $this->data['sube_id']?>">
+        <?php endif;?>
     <table class="table table-bordered table-stripped" >
         <thead>
         <th>Sıra</th>
@@ -10,7 +14,6 @@
         </thead>
         <tbody>
 
-        <?php // print_r($this->data); ?>
         <?php foreach($this->data as $i=> $satir):?>
             <tr>
                 <td><?php echo $i+1 ?></td>
@@ -20,11 +23,18 @@
                 <td><?php echo $satir['soyadi']?></td>
             </tr>
         <?php endforeach?>
-
-
         </tbody>
-
     </table>
+        <tr>
+            <td><select name="ogrenci_id" ">
+                    <option value="">Öğrenci</option>
+                    <?php foreach($this->data1 as $data ):?>
+                        <option id="kullanici_id" value="<?php echo $data['kullanici_id'] ?>"><?php echo $data['adi']; echo $data['soyadi'] ?></option>
+                    <?php endforeach;?>
+                </select></td>
+            <td><button type="submit" class="btn btn-success btn-sm glyphicon glyphicon-save">Öğrenci Ekle</button> </td>
+        </tr>
+    </form>
 <?php else:?>
     <h3>Bu şubede öğrenci bulunamadı.</h3>
 <?php endif?>
